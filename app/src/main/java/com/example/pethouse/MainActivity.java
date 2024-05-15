@@ -1,6 +1,7 @@
 package com.example.pethouse;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 
@@ -11,6 +12,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,8 +42,15 @@ public class MainActivity extends AppCompatActivity {
         myFloat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Snackbar.make(v, getResources().getString(R.string.message), Snackbar.LENGTH_LONG)
+                        .setAction(getResources().getString(R.string.action_text), new View.OnClickListener() {
 
-            }
+                            @Override
+                            public void onClick(View v) {
+                                Log.i("SNACK BAR", "Click the snackbar");
+                            }
+                        }).show();
+        }
         });
     }
 }
