@@ -48,6 +48,8 @@ android {
 
 dependencies {
 
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01")
+
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
